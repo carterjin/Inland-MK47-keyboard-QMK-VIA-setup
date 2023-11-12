@@ -25,7 +25,7 @@ Some useful info about this keyboard:
 This is the most customizable way, I can customize some special keys, macros and realize some very interesting RGB effects, but it is also the most complicated way.
 1. Follow the instruction on QMK website to install QMK MSYS: https://docs.qmk.fm/#/newbs_getting_started
 2. make sure qmk_firmware folder is up to date
-3. QMK website examples and my other keyboard uses SEND_STRING() (upper case) for macro, but this will lead to calling send_string_P(), and if you check qmk_firmware/quantum/send_string/send_string.c, you can see:
+3. My macro keys didn't work at first, because with QMK website examples and my other keyboard uses SEND_STRING() (upper case) for macro, but this will lead to calling send_string_P(), and if you check qmk_firmware/quantum/send_string/send_string.c, you can see:
 #if defined(__AVR__)
 void send_string_P(const char *string) {
     send_string_with_delay_P(string, 0);
