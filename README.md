@@ -34,7 +34,9 @@ void send_string_P(const char *string) {
 }
 Since I suppose we are not AVR this function is not defined, leading to compile error, saying send_string_P is not defined. However, if I just use send_string() (lower case, which is another function) it seems to work the same just fine.
 4. I turned on LTO_ENABLE = yes in rule.mk to save some firmware space, with the downside of slightly slower compiling speed which doesn't really matter. Current QMK MSYS can't check firmware size for this board as it can for some other boards, so I imagine if your size is too big it won't warn you but will cause error when flashing or after flashing.
-5. After you compiled the firmware you will need a special version of QMK toolbox to flash, the regular version won't work, link: https://glorious-qmk.nyc3.digitaloceanspaces.com/qmk_toolbox.exe The place where I found this link and some other info: https://www.gloriousgaming.com/blogs/guides-resources/gmmk-2-qmk-installation-guide, Also check the "WB32 DFU" section in QMK Flashing page: https://docs.qmk.fm/#/flashing
+5. After you compiled the firmware you will need a special version of QMK toolbox to flash, the regular version won't work, link: https://glorious-qmk.nyc3.digitaloceanspaces.com/qmk_toolbox.exe 
+The place where I found this link and some other info: https://www.gloriousgaming.com/blogs/guides-resources/gmmk-2-qmk-installation-guide
+Also check the "WB32 DFU" section in QMK Flashing page: https://docs.qmk.fm/#/flashing
 6. You need to install wb32_dfu_updater from here: https://github.com/WestberryTech/wb32-dfu-updater/tree/master. You will see "WB32 DFU via wb32-dfu-updater-cli..." in the Supported bootloader list(see image below)
 7. To flash this works for me: hold the top left button (ESC by default) while plug in, this will turn the keyboard into DFU mode. You will see "WB32 DFU device connected (WinUsb)..." (see image below)
 ![](images/QMK_toolbox_screenshot.png)
