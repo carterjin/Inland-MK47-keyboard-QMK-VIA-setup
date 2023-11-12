@@ -13,7 +13,7 @@ Some useful info about this keyboard:
 # To use VIA online
 1. The link from VIA official website doesn't work for this keyboard, won't recognize it. You need to use this link instead: https://via.evove.top/
 2. I am able to add a (hold Ctrl, tap Esc) key, which is not available on VIA by editing the json file and changing the key to MT(MOD_LCTL,KC_ESC).
-3. After flashing with QMK tool I am not able to use VIA anymore, maybe I need to reset to factory setting to do that.
+3. After flashing with QMK toolbox I am not able to use VIA anymore, maybe I need to reset to factory setting to do that.
 
 # To use QMK configurator
 1. The link to QMK Configurator: https://config.qmk.fm/#/inland/mk47/LAYOUT_planck_mit
