@@ -6,6 +6,9 @@ Some useful info about this keyboard:
 1. Keycap profile is DSA.
 2. The microcontroller is WestBerry wb32fq95.
 3. RGB is per key RGB.
+4. Keycap letters are shine through, although not very bright.
+5. There are no bump or ridges on Key F and J. I did a quick fix by sticking some tape onto them.
+6. Switches are Huano Red Linear Switches, I heard people's opinion on these switches are not great, but I feel fine.
 
 # To use VIA online
 1. The link from VIA official website doesn't work for this keyboard, won't recognize it. You need to use this link instead: https://via.evove.top/
