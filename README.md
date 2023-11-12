@@ -34,3 +34,4 @@ Since I suppose we are not AVR this function is not defined leading to compile e
 5. After you compiled the firmware you will need a special version of QMK toolbox to flash, the regular version won't work, link: https://glorious-qmk.nyc3.digitaloceanspaces.com/qmk_toolbox.exe
 6. You need to install wb32_dfu_updater from here: https://github.com/WestberryTech/wb32-dfu-updater/tree/master. You will see "WB32 DFU via wb32-dfu-updater-cli..." in the Supported bootloader list(see image below)
 7. To flash this works for me: hold the top left button (ESC by default) while plug in, this will turn the keyboard into DFU mode. You will see "WB32 DFU device connected (WinUsb)..." (see image below)
+![](images/QMK_toolbox_screenshot.png)
