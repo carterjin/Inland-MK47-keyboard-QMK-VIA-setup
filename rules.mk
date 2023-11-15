@@ -1,0 +1,2 @@
+DYNAMIC_MACRO_ENABLE = yes
+LTO_ENABLE = yes
