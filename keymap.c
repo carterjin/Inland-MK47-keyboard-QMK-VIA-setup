@@ -36,7 +36,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case MCCROP:
         if (record->event.pressed) {
             // when keycode MCCROP is pressed
-            send_string(SS_LALT("jp")"vc");
+            send_string(SS_LALT(SS_DELAY(100)"jp")"vc");
         } else {
             // when keycode QMKBEST is released
         }
@@ -49,7 +49,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         break;
     case MCPSCR:
         if (record->event.pressed) {
-           send_string(SS_LALT(SS_TAP(X_PSCR))); // selects all and copies
+           send_string(SS_LALT(SS_DELAY(100) SS_TAP(X_PSCR))); // selects all and copies
         }
         break;
     case MCPASTE:
