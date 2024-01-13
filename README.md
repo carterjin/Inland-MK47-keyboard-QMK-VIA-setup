@@ -32,8 +32,10 @@ void send_string_P(const char *string) {
     send_string_with_delay_P(string, 0);
 }
 Since I suppose we are not AVR this function is not defined, leading to compile error, saying send_string_P is not defined. However, if I just use send_string() (lower case, which is another function) it seems to work the same just fine.
-4. I turned on LTO_ENABLE = yes in rule.mk to save some firmware space, with the downside of slightly slower compiling speed which doesn't really matter. Current QMK MSYS can't check firmware size for this board as it can for some other boards, so I imagine if your size is too big it won't warn you but will cause error when flashing or after flashing.
-5. After you compiled the firmware see "Flashing" part below to flash the firmware.
+Update 01/12/2024: I found with send_string sometimes the keys are pressed too fast and won't successfully register especially when using remote desktop. So I added SS_DELAY(100) to the macros.
+
+5. I turned on LTO_ENABLE = yes in rule.mk to save some firmware space, with the downside of slightly slower compiling speed which doesn't really matter. Current QMK MSYS can't check firmware size for this board as it can for some other boards, so I imagine if your size is too big it won't warn you but will cause error when flashing or after flashing.
+6. After you compiled the firmware see "Flashing" part below to flash the firmware.
 
 # Flashing
 1. After you compiled the firmware (either with QMK configurator or QMK MSYS) you will need a special version of QMK toolbox to flash, link: https://glorious-qmk.nyc3.digitaloceanspaces.com/qmk_toolbox.exe, the regular version on QMK official site won't work.
