@@ -44,7 +44,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case MCMASTER:
         if (record->event.pressed) {
             // when keycode MCMASTER is pressed
-            send_string(SS_LALT("x")"ya");
+            send_string(SS_LALT(SS_DELAY(100)"x")"ya");
         } 
         break;
     case MCPSCR:
@@ -59,7 +59,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         break;
     case MCCRPTMS:
         if (record->event.pressed) {
-           send_string(SS_LALT("x")"yc"); // selects all and copies
+           send_string(SS_LALT(SS_DELAY(100)"x")"yc"); // selects all and copies
         }
         break;
     }
